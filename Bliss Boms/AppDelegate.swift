@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    
+    // load the readings from JSON file.  shared across all controllers
+    ReadingManager.loadReadings()
+    
     return true
   }
 
@@ -31,6 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationWillEnterForeground(application: UIApplication) {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    // notify view controllers that need to know - currently only view controller 1
+    let myController = self.window?.rootViewController as! UITabBarController
+    let selectedViewController = myController.selectedViewController
+    if let vc1 = selectedViewController as? ViewController1 {
+      vc1.gameController.willEnterForeground()
+    }
+    
   }
 
   func applicationDidBecomeActive(application: UIApplication) {

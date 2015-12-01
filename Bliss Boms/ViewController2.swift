@@ -9,8 +9,6 @@
 
 import UIKit
 
-import UIKit
-
 class ViewController2: UIViewController, UIGestureRecognizerDelegate {
   
   private let controller: FateController

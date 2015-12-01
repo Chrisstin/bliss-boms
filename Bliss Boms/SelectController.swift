@@ -139,6 +139,7 @@ class SelectController: GameController {
                 label.alpha = 0.0
               }, completion: { finished in
                 self.hud.tapLabel?.removeFromSuperview()
+                self.hud.tapLabel = nil
             })
         })
     }
@@ -181,6 +182,19 @@ class SelectController: GameController {
     if currentCard == nil {
       shuffleAndDeal()
     }
+  }
+  /*
+  *****************************************
+  * Will Disappear
+  ******************************************
+  */
+  func willDisappear() {
+
+    currentCard?.hidden = true
+    currentCard?.moveBackDown()
+    currentCard?.hidden = false
+    currentCard = nil
+
   }
   
   // MARK: - Touch events
@@ -234,6 +248,7 @@ class SelectController: GameController {
     for subview in gameView.subviews {
       if subview is TapLabelView {
         subview.removeFromSuperview()
+        hud.tapLabel = nil
       }
     }
     

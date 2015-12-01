@@ -20,7 +20,6 @@
 		8308518D1BB166790015A6CA /* TapLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308518C1BB166790015A6CA /* TapLabelView.swift */; };
 		8308518F1BB166850015A6CA /* ReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308518E1BB166850015A6CA /* ReadingView.swift */; };
 		830851921BB166AC0015A6CA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830851911BB166AC0015A6CA /* Config.swift */; };
-		83492ABD1BBD1470001F10D4 /* SpiralController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83492ABC1BBD1470001F10D4 /* SpiralController2.swift */; };
 		834B17841BD8AE5D00D3F067 /* SnakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B17831BD8AE5D00D3F067 /* SnakeController.swift */; };
 		834B3B2E1BD3511E00171623 /* ReadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B3B2D1BD3511E00171623 /* ReadingManager.swift */; };
 		834B59281BBA4DEC0067D8EB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B59271BBA4DEC0067D8EB /* GameController.swift */; };
@@ -29,25 +28,10 @@
 		834F57651BB51DE700160B88 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F57641BB51DE700160B88 /* StarsView.swift */; };
 		834F57671BB5219D00160B88 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 834F57661BB5219D00160B88 /* spark.png */; };
 		835440901BD0CA760040FF28 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8354408F1BD0CA760040FF28 /* FileReader.swift */; };
-		8354B25D1BC8F530001BFF83 /* SpiralController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8354B25C1BC8F530001BFF83 /* SpiralController3.swift */; };
+		835507621C0C34370096761C /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835507611C0C34370096761C /* ViewController4.swift */; };
+		835507641C0C361A0096761C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835507631C0C361A0096761C /* HomeView.swift */; };
 		835797CB1BCF46D1008EF95B /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835797CA1BCF46D1008EF95B /* Reading.swift */; };
 		835E9D441BDB6970007C9480 /* blissboms.json in Resources */ = {isa = PBXBuildFile; fileRef = 835E9D431BDB6970007C9480 /* blissboms.json */; };
-		83696F771BB283EA0007BA5C /* card 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F671BB283EA0007BA5C /* card 1.png */; };
-		83696F781BB283EA0007BA5C /* card 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F681BB283EA0007BA5C /* card 2.png */; };
-		83696F791BB283EA0007BA5C /* card 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F691BB283EA0007BA5C /* card 3.png */; };
-		83696F7A1BB283EA0007BA5C /* card 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6A1BB283EA0007BA5C /* card 4.png */; };
-		83696F7B1BB283EA0007BA5C /* card 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6B1BB283EA0007BA5C /* card 5.png */; };
-		83696F7C1BB283EA0007BA5C /* card 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6C1BB283EA0007BA5C /* card 6.png */; };
-		83696F7D1BB283EA0007BA5C /* card 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6D1BB283EA0007BA5C /* card 7.png */; };
-		83696F7E1BB283EA0007BA5C /* card 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6E1BB283EA0007BA5C /* card 8.png */; };
-		83696F7F1BB283EA0007BA5C /* card 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F6F1BB283EA0007BA5C /* card 9.png */; };
-		83696F801BB283EA0007BA5C /* card 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F701BB283EA0007BA5C /* card 10.png */; };
-		83696F811BB283EA0007BA5C /* card 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F711BB283EA0007BA5C /* card 11.png */; };
-		83696F821BB283EA0007BA5C /* card 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F721BB283EA0007BA5C /* card 12.png */; };
-		83696F831BB283EA0007BA5C /* card 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F731BB283EA0007BA5C /* card 13.png */; };
-		83696F841BB283EA0007BA5C /* card 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F741BB283EA0007BA5C /* card 14.png */; };
-		83696F851BB283EA0007BA5C /* card 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F751BB283EA0007BA5C /* card 15.png */; };
-		83696F861BB283EA0007BA5C /* card 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 83696F761BB283EA0007BA5C /* card 16.png */; };
 		83696F881BB288460007BA5C /* SelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F871BB288460007BA5C /* SelectController.swift */; };
 		83696F8A1BB2886C0007BA5C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F891BB2886C0007BA5C /* ArrayExtension.swift */; };
 		83696F8C1BB2892E0007BA5C /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F8B1BB2892E0007BA5C /* HUDView.swift */; };
@@ -85,7 +69,6 @@
 		8308518C1BB166790015A6CA /* TapLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapLabelView.swift; sourceTree = "<group>"; };
 		8308518E1BB166850015A6CA /* ReadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingView.swift; sourceTree = "<group>"; };
 		830851911BB166AC0015A6CA /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		83492ABC1BBD1470001F10D4 /* SpiralController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralController2.swift; sourceTree = "<group>"; };
 		834B17831BD8AE5D00D3F067 /* SnakeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeController.swift; sourceTree = "<group>"; };
 		834B3B2D1BD3511E00171623 /* ReadingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingManager.swift; sourceTree = "<group>"; };
 		834B59271BBA4DEC0067D8EB /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -94,25 +77,10 @@
 		834F57641BB51DE700160B88 /* StarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		834F57661BB5219D00160B88 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		8354408F1BD0CA760040FF28 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		8354B25C1BC8F530001BFF83 /* SpiralController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralController3.swift; sourceTree = "<group>"; };
+		835507611C0C34370096761C /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		835507631C0C361A0096761C /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		835797CA1BCF46D1008EF95B /* Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
 		835E9D431BDB6970007C9480 /* blissboms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blissboms.json; sourceTree = "<group>"; };
-		83696F671BB283EA0007BA5C /* card 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 1.png"; sourceTree = "<group>"; };
-		83696F681BB283EA0007BA5C /* card 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 2.png"; sourceTree = "<group>"; };
-		83696F691BB283EA0007BA5C /* card 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 3.png"; sourceTree = "<group>"; };
-		83696F6A1BB283EA0007BA5C /* card 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 4.png"; sourceTree = "<group>"; };
-		83696F6B1BB283EA0007BA5C /* card 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 5.png"; sourceTree = "<group>"; };
-		83696F6C1BB283EA0007BA5C /* card 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 6.png"; sourceTree = "<group>"; };
-		83696F6D1BB283EA0007BA5C /* card 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 7.png"; sourceTree = "<group>"; };
-		83696F6E1BB283EA0007BA5C /* card 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 8.png"; sourceTree = "<group>"; };
-		83696F6F1BB283EA0007BA5C /* card 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 9.png"; sourceTree = "<group>"; };
-		83696F701BB283EA0007BA5C /* card 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 10.png"; sourceTree = "<group>"; };
-		83696F711BB283EA0007BA5C /* card 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 11.png"; sourceTree = "<group>"; };
-		83696F721BB283EA0007BA5C /* card 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 12.png"; sourceTree = "<group>"; };
-		83696F731BB283EA0007BA5C /* card 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 13.png"; sourceTree = "<group>"; };
-		83696F741BB283EA0007BA5C /* card 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 14.png"; sourceTree = "<group>"; };
-		83696F751BB283EA0007BA5C /* card 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 15.png"; sourceTree = "<group>"; };
-		83696F761BB283EA0007BA5C /* card 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card 16.png"; sourceTree = "<group>"; };
 		83696F871BB288460007BA5C /* SelectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectController.swift; sourceTree = "<group>"; };
 		83696F891BB2886C0007BA5C /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		83696F8B1BB2892E0007BA5C /* HUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
@@ -168,6 +136,7 @@
 				830851791BB1639B0015A6CA /* ViewController1.swift */,
 				8308517B1BB163C90015A6CA /* ViewController2.swift */,
 				8308517D1BB163EC0015A6CA /* ViewController3.swift */,
+				835507611C0C34370096761C /* ViewController4.swift */,
 				8308515D1BB15B2E0015A6CA /* Main.storyboard */,
 				830851601BB15B2E0015A6CA /* Images.xcassets */,
 				830851621BB15B2E0015A6CA /* LaunchScreen.xib */,
@@ -205,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				830851821BB165130015A6CA /* Texts */,
-				830851811BB1650C0015A6CA /* Images */,
 				830851801BB164FF0015A6CA /* Particles */,
 			);
 			name = Assets;
@@ -217,29 +185,6 @@
 				834F57661BB5219D00160B88 /* spark.png */,
 			);
 			name = Particles;
-			sourceTree = "<group>";
-		};
-		830851811BB1650C0015A6CA /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				83696F671BB283EA0007BA5C /* card 1.png */,
-				83696F681BB283EA0007BA5C /* card 2.png */,
-				83696F691BB283EA0007BA5C /* card 3.png */,
-				83696F6A1BB283EA0007BA5C /* card 4.png */,
-				83696F6B1BB283EA0007BA5C /* card 5.png */,
-				83696F6C1BB283EA0007BA5C /* card 6.png */,
-				83696F6D1BB283EA0007BA5C /* card 7.png */,
-				83696F6E1BB283EA0007BA5C /* card 8.png */,
-				83696F6F1BB283EA0007BA5C /* card 9.png */,
-				83696F701BB283EA0007BA5C /* card 10.png */,
-				83696F711BB283EA0007BA5C /* card 11.png */,
-				83696F721BB283EA0007BA5C /* card 12.png */,
-				83696F731BB283EA0007BA5C /* card 13.png */,
-				83696F741BB283EA0007BA5C /* card 14.png */,
-				83696F751BB283EA0007BA5C /* card 15.png */,
-				83696F761BB283EA0007BA5C /* card 16.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		830851821BB165130015A6CA /* Texts */ = {
@@ -270,6 +215,7 @@
 				8308518E1BB166850015A6CA /* ReadingView.swift */,
 				8308518C1BB166790015A6CA /* TapLabelView.swift */,
 				834F57641BB51DE700160B88 /* StarsView.swift */,
+				835507631C0C361A0096761C /* HomeView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,8 +238,6 @@
 				83696F871BB288460007BA5C /* SelectController.swift */,
 				834DA5F51BB3C58800A9B2BF /* DealController.swift */,
 				83696F931BB28B590007BA5C /* SpiralController.swift */,
-				83492ABC1BBD1470001F10D4 /* SpiralController2.swift */,
-				8354B25C1BC8F530001BFF83 /* SpiralController3.swift */,
 				83696F971BB28BFE0007BA5C /* FishController.swift */,
 				834B17831BD8AE5D00D3F067 /* SnakeController.swift */,
 				83696F911BB28A210007BA5C /* FateController.swift */,
@@ -360,6 +304,7 @@
 				TargetAttributes = {
 					830851511BB15B2E0015A6CA = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = HMUPTRE7J2;
 					};
 					830851681BB15B2E0015A6CA = {
 						CreatedOnToolsVersion = 6.4;
@@ -391,25 +336,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83696F811BB283EA0007BA5C /* card 11.png in Resources */,
-				83696F861BB283EA0007BA5C /* card 16.png in Resources */,
-				83696F7F1BB283EA0007BA5C /* card 9.png in Resources */,
-				83696F7E1BB283EA0007BA5C /* card 8.png in Resources */,
-				83696F801BB283EA0007BA5C /* card 10.png in Resources */,
 				834F57671BB5219D00160B88 /* spark.png in Resources */,
-				83696F841BB283EA0007BA5C /* card 14.png in Resources */,
-				83696F7C1BB283EA0007BA5C /* card 6.png in Resources */,
-				83696F791BB283EA0007BA5C /* card 3.png in Resources */,
-				83696F821BB283EA0007BA5C /* card 12.png in Resources */,
-				83696F771BB283EA0007BA5C /* card 1.png in Resources */,
 				8308515F1BB15B2E0015A6CA /* Main.storyboard in Resources */,
 				830851641BB15B2E0015A6CA /* LaunchScreen.xib in Resources */,
-				83696F7B1BB283EA0007BA5C /* card 5.png in Resources */,
-				83696F851BB283EA0007BA5C /* card 15.png in Resources */,
-				83696F7A1BB283EA0007BA5C /* card 4.png in Resources */,
-				83696F831BB283EA0007BA5C /* card 13.png in Resources */,
-				83696F781BB283EA0007BA5C /* card 2.png in Resources */,
-				83696F7D1BB283EA0007BA5C /* card 7.png in Resources */,
 				835E9D441BDB6970007C9480 /* blissboms.json in Resources */,
 				830851611BB15B2E0015A6CA /* Images.xcassets in Resources */,
 			);
@@ -431,7 +360,6 @@
 			files = (
 				8308517C1BB163C90015A6CA /* ViewController2.swift in Sources */,
 				830851891BB165EA0015A6CA /* PageItemController.swift in Sources */,
-				83492ABD1BBD1470001F10D4 /* SpiralController2.swift in Sources */,
 				8308517A1BB1639B0015A6CA /* ViewController1.swift in Sources */,
 				83696F8C1BB2892E0007BA5C /* HUDView.swift in Sources */,
 				8308517E1BB163EC0015A6CA /* ViewController3.swift in Sources */,
@@ -445,6 +373,7 @@
 				834DA5F61BB3C58800A9B2BF /* DealController.swift in Sources */,
 				834B59281BBA4DEC0067D8EB /* GameController.swift in Sources */,
 				83696F901BB289790007BA5C /* CardViewRectangle.swift in Sources */,
+				835507641C0C361A0096761C /* HomeView.swift in Sources */,
 				83696F8A1BB2886C0007BA5C /* ArrayExtension.swift in Sources */,
 				834B3B2E1BD3511E00171623 /* ReadingManager.swift in Sources */,
 				834B17841BD8AE5D00D3F067 /* SnakeController.swift in Sources */,
@@ -452,9 +381,9 @@
 				8308518F1BB166850015A6CA /* ReadingView.swift in Sources */,
 				83696F981BB28BFE0007BA5C /* FishController.swift in Sources */,
 				83696F941BB28B590007BA5C /* SpiralController.swift in Sources */,
-				8354B25D1BC8F530001BFF83 /* SpiralController3.swift in Sources */,
 				835440901BD0CA760040FF28 /* FileReader.swift in Sources */,
 				834F57651BB51DE700160B88 /* StarsView.swift in Sources */,
+				835507621C0C34370096761C /* ViewController4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +511,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bliss Boms/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.christinenewbery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -594,7 +525,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bliss Boms/Info.plist";
+				"INSTALL_OWNER[sdk=*]" = "Christine Newbery";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.christinenewbery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

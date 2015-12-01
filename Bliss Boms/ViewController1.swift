@@ -50,6 +50,11 @@ class ViewController1: UIViewController, UIGestureRecognizerDelegate {
     
   }
   
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    gameController.willDisappear()
+  }
+  
   override func prefersStatusBarHidden() -> Bool {
     return true
   }

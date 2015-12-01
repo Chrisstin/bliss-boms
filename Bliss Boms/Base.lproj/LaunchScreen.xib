@@ -28,7 +28,7 @@
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.8901960784313725" green="0.90196078431372551" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Select" id="iSJ-ui-Ei2"/>
+                    <tabBarItem key="tabBarItem" title="" id="iSJ-ui-Ei2"/>
                 </viewController>
                 <viewController id="AK9-40-CyT">
                     <layoutGuides>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fate Chooses" id="dpG-WD-jEE"/>
+                    <tabBarItem key="tabBarItem" title="" id="dpG-WD-jEE"/>
                 </viewController>
             </viewControllers>
             <point key="canvasLocation" x="429" y="-129"/>

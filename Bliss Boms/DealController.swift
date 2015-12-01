@@ -25,6 +25,16 @@ class DealController {
         card.swapCardFace()
       }
       card.layer.cornerRadius = card.frame.size.width/2
+//      if card.cardNum == 2 {
+//        print("horiz")
+//        print(card.constraintsAffectingLayoutForAxis(.Horizontal))
+//        print("vert")
+//        print(card.constraintsAffectingLayoutForAxis(.Vertical))
+//        print("horiz gamev")
+//        print(gameView.constraintsAffectingLayoutForAxis(.Horizontal))
+//        print("vert gamev")
+//        print(gameView.constraintsAffectingLayoutForAxis(.Vertical))
+//      }
       
       //delete all card layout constraints in case has switched from different dealer
       NSLayoutConstraint.deactivateConstraints(card.origConstraints)

@@ -58,8 +58,7 @@ class HomeView: UITextView {
     descrip += "You’ll be sure to be Back to Bliss in no time!" + "\n\n"
     descrip += "Just like a bomb, Bliss Boms are designed to explode the underlying thought that is creating your current mood and give you the opportunity to choose something different. Reality is not a set, rigid, defined thing. It is dynamic and ever changing." + "\n\n"
     descrip += "Simply select the card you're drawn to, or let Fate choose for you, or browse the entire pack.  Then read your way into a better mood and watch your life change for the better!" + "\n\n"
-    descrip += "Additional cards coming soon."
-    
+    descrip += "Additional cards coming soon."     
     
     // create the fonts - based on user's settings
     // except for Heading - override the size to 25% larger than body

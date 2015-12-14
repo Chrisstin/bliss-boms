@@ -191,7 +191,6 @@ class ReadingView: UITextView {
   
   
   deinit {
-    print("de-initialising reading view")
     NSNotificationCenter.defaultCenter().removeObserver(UIContentSizeCategoryDidChangeNotification)
     
   }

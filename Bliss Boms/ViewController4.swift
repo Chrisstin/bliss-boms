@@ -48,7 +48,7 @@ class ViewController4: UIViewController {
   
 
   @IBAction func visitWebsite(sender: AnyObject) {
-    UIApplication.sharedApplication().openURL(NSURL(string: "http://allysonroesler.wix.com/backtobliss#!contact/c21dx")!)
+    UIApplication.sharedApplication().openURL(NSURL(string: "http://allysonroesler.wix.com/backtobliss")!)
   }
   
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController4: UIViewController {
   
-  @IBOutlet weak var visitButton: UIButton!
   @IBOutlet weak var homeView: HomeView!
   
   //let backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 252/255, alpha: 1.0)
@@ -19,12 +18,7 @@ class ViewController4: UIViewController {
   override func viewDidLoad() {
     
     self.view.backgroundColor = backgroundColor
-    //self.homeView.backgroundColor = backgroundColor
-    //self.visitButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
     self.homeView.layer.cornerRadius = 5.0
-    self.visitButton.setTitleColor(UIColor(red: 0, green: 122/255, blue: 1, alpha: 1), forState: .Normal)
-//    let pinch = UIPinchGestureRecognizer(target: self, action: "handlePinch:")
-//    self.homeView.addGestureRecognizer(pinch)
 
   }
   
@@ -40,15 +34,5 @@ class ViewController4: UIViewController {
     return true
   }
   
-//  @objc func handlePinch(recogniser: UIPinchGestureRecognizer) {
-//    if recogniser.state == .Changed {
-//      homeView.font = UIFont.
-//    }
-//  }
-  
-
-  @IBAction func visitWebsite(sender: AnyObject) {
-    UIApplication.sharedApplication().openURL(NSURL(string: "http://allysonroesler.wix.com/backtobliss")!)
-  }
   
 }

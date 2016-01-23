@@ -22,7 +22,7 @@ class CardView: UIImageView {
   var displayConstraints = [NSLayoutConstraint]()
   
   private let cardImage: UIImage!
-  private let textImage: UIImage!
+  private let readingImage: UIImage!
   var readingView: ReadingView!
   
   var currentFace: CardFace = .Image
@@ -50,7 +50,7 @@ class CardView: UIImageView {
     
     self.cardNum = cardNum
     self.cardImage = UIImage(named: "card \(cardNum)")
-    self.textImage = self.cardImage  // currently, using same image
+    self.readingImage = self.cardImage  // currently, using same image
     
     super.init(image: cardImage)
 
@@ -145,7 +145,7 @@ class CardView: UIImageView {
 
       // swap to reading view
       currentFace = .Reading
-      self.image = textImage
+      self.image = readingImage
       // create the reading view if doesn't already exist, otherwise unhide it
       if readingView == nil {
         setReadingView()

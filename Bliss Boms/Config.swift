@@ -35,6 +35,27 @@ let CardFlipSpeed: NSTimeInterval = 1.5
 let CardDismissSpeed: NSTimeInterval = 1.0
 let ShuffleSpeed: NSTimeInterval = 0.0
 
+// URLs
+let FirstBitURL = "http://allysonroesler.wix.com/blissboms#!"
+let URLs = [
+  1  : "reach-out-to-others/cfvg",
+  2  : "allow-the-universe-to-bring-you-good/jrok9",
+  3  : "clear-away-negative-vibrations/srqnk",
+  4  : "let-go-of-the-struggle/qbi9a",
+  5  : "you-are-not-wrong/a94rq",
+  6  : "blank/xdko0",
+  7  : "blank/zxjcc",
+  8  : "freedom/fdv98",
+  9  : "depression/mshcy",
+  10 : "blank/luai2",
+  11 : "refocus-your-attention/ta0f1",
+  12 : "fitting-in/xf5nt",
+  13 : "blank/hr9z5",
+  14 : "blank/vymr2",
+  15 : "potency/tm8ak",
+  16 : "blank/bkw23",
+]
+
 // Theme colours
 enum ColType {
   case Animation,
@@ -44,7 +65,8 @@ enum ColType {
   ShuffleButtonImageTint,
   TapLabel,
   SegControl,
-  SegControlTint
+  SegControlTint,
+  Text
 }
 
 let Theme1 : [ColType : UIColor] = [
@@ -56,6 +78,7 @@ let Theme1 : [ColType : UIColor] = [
   ColType.TapLabel :              UIColor(red: 37/255, green: 94/255, blue: 158/255, alpha: 1.0),
   ColType.SegControl :            UIColor(red: 227/255, green: 230/255, blue: 242/255, alpha: 1.0),
   ColType.SegControlTint:         UIColor(red: 47/255, green: 104/255, blue: 168/255, alpha: 1.0),
+  ColType.Text:                   UIColor(red: 0.51, green: 0.18, blue: 0.73, alpha: 1),
 ]
 
 let Theme2 : [ColType : UIColor] = [
@@ -66,6 +89,7 @@ let Theme2 : [ColType : UIColor] = [
   ColType.TapLabel :              UIColor(red: 193/255, green: 188/255, blue: 196/255, alpha: 1.0),
   ColType.SegControl :            UIColor(red: 193/255, green: 177/255, blue: 201/255, alpha: 1.0),
   ColType.SegControlTint:         UIColor(red: 47/255, green: 104/255, blue: 168/255, alpha: 1.0),
+  ColType.Text:                   UIColor(red: 0.51, green: 0.18, blue: 0.73, alpha: 1),
 ]
 
 let Theme3 : [ColType : UIColor] = [
@@ -76,7 +100,10 @@ let Theme3 : [ColType : UIColor] = [
   ColType.TapLabel :              UIColor(red: 71/255, green: 71/255, blue: 118/255, alpha: 1.0),
   ColType.SegControl :            UIColor(red: 220/255, green: 220/255, blue: 245/255, alpha: 1.0),
   ColType.SegControlTint:         UIColor(red: 59/255, green: 53/255, blue: 140/255, alpha: 1.0),
+  ColType.Text:                   UIColor(red: 0.51, green: 0.18, blue: 0.73, alpha: 1),
 ]
+
+var Colors = Theme1  //default, can be changed by GameController
 
 let BrowseBackgroundColour = UIColor(red: 43/255, green: 45/255, blue: 46/255, alpha: 1.0)
 

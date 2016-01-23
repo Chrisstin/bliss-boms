@@ -13,14 +13,20 @@ class ReadingView: UITextView {
   let cardNum: Int
   
   var heading = ""
-  var descrip = ""
-  var synop = ""
-  var artist = ""
+  var headingText = ""
+  var descripText = ""
+  var synopText = ""
+  var artistText = ""
   
+  var toolbar: UIToolbar!
+  var shareItem: UIBarButtonItem!
+
   
   required init(coder aDecoder: NSCoder) {
     fatalError("use init(cardNum: frame:")
   }
+  
+  // MARK: Init
   
   /*
   *****************************************
@@ -47,6 +53,8 @@ class ReadingView: UITextView {
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredTextSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     
+    loadToolbar()
+    
   }
   
 
@@ -57,29 +65,30 @@ class ReadingView: UITextView {
   */
   
   func createText() {
-    
+
     // initialise
     self.textStorage.mutableString.setString("")
-    descrip.removeAll(keepCapacity: true)
-    synop.removeAll(keepCapacity: true)
+    descripText.removeAll(keepCapacity: true)
+    synopText.removeAll(keepCapacity: true)
     
     // get reading text for this card number
     let reading = ReadingManager.getReadingForCard(self.cardNum)
+    heading = reading.heading
     
-    // set up Heading, Description, Synopsis and Caption
-    heading = reading.heading + "\n\n"
+    // set up Heading, Description, Synopsis and Caption Texts
+    headingText = "\n" + reading.heading + "\n\n"
     
     for description in reading.description {
-      descrip += description
-      descrip += "\n\n"
+      descripText += description
+      descripText += "\n\n"
     }
     
     for synopsis in reading.synopsis {
       let str = "\u{2022}" + "\t" + synopsis + "\n\n"
-      synop += str
+      synopText += str
     }
     
-    artist = "Artwork by " + reading.artist
+    artistText = "Artwork by " + reading.artist
     
     // create the fonts - based on user's settings
     // except for Heading - override the size to 25% larger than body
@@ -90,7 +99,7 @@ class ReadingView: UITextView {
     let fontC = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
     
     // other attributes
-    let textColor = UIColor(red: 0.51, green: 0.18, blue: 0.73, alpha: 1)
+    let textColor = Colors[.Text]!
     let paraStyleH = NSMutableParagraphStyle()
     paraStyleH.alignment = .Center
     let paraStyleB = NSMutableParagraphStyle()
@@ -108,7 +117,7 @@ class ReadingView: UITextView {
       NSFontAttributeName : fontH,
       NSParagraphStyleAttributeName : paraStyleH
     ]
-    var attributedString = NSAttributedString(string: heading, attributes: attributes)
+    var attributedString = NSAttributedString(string: headingText, attributes: attributes)
     self.textStorage.appendAttributedString(attributedString)
     
     // synopsis
@@ -117,7 +126,7 @@ class ReadingView: UITextView {
       NSFontAttributeName : fontB,
       NSParagraphStyleAttributeName : paraStyleList
     ]
-    attributedString = NSAttributedString(string: synop, attributes: attributes)
+    attributedString = NSAttributedString(string: synopText, attributes: attributes)
     self.textStorage.appendAttributedString(attributedString)
     
     // description
@@ -126,7 +135,7 @@ class ReadingView: UITextView {
       NSFontAttributeName : fontB,
       NSParagraphStyleAttributeName : paraStyleB
     ]
-    attributedString = NSAttributedString(string: descrip, attributes: attributes)
+    attributedString = NSAttributedString(string: descripText, attributes: attributes)
     self.textStorage.appendAttributedString(attributedString)
     
     // caption
@@ -135,15 +144,11 @@ class ReadingView: UITextView {
       NSFontAttributeName : fontC,
       NSParagraphStyleAttributeName : paraStyleC
     ]
-    attributedString = NSAttributedString(string: artist, attributes: attributes)
+    attributedString = NSAttributedString(string: artistText, attributes: attributes)
     self.textStorage.appendAttributedString(attributedString)
     
   }
  
-  
-  func preferredTextSizeChanged(notification: NSNotification) {
-    createText()
-  }
   
   /*
   *****************************************
@@ -188,7 +193,49 @@ class ReadingView: UITextView {
       constant: -15.0)
     conBot.active = true
   }
+  /*
+  *****************************************
+  * Load Toolbar
+  ******************************************
+  */
+  func loadToolbar() {
+    toolbar = UIToolbar()
+    toolbar = UIToolbar(frame: CGRect(x: self.frame.width - 80, y: 0, width: 80, height: 44))
+    
+
+    shareItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "share")
+    let items = [shareItem!]
+    toolbar.setItems(items, animated: false)
+    addSubview(toolbar)
+    toolbar.barTintColor = UIColor.whiteColor()
+    toolbar.tintColor = Colors[.Text]!
+    
+  }
   
+  // MARK: Other
+  
+  
+  func preferredTextSizeChanged(notification: NSNotification) {
+    createText()
+  }
+  
+  /*
+  *****************************************
+  * Share
+  ******************************************
+  */
+  func share() {
+    let image = UIImage(named: "card \(cardNum)")
+    let text = heading + " #OracleCards @Bliss_Boms. Read more at"
+    var link = FirstBitURL
+    if let cardUrl = URLs[cardNum] {
+      link += cardUrl
+    }
+    
+    let activity = UIActivityViewController(activityItems: [text, link, image!], applicationActivities: nil)
+    let rootVC = UIApplication.sharedApplication().keyWindow?.rootViewController
+    rootVC!.presentViewController(activity, animated: true, completion: nil)
+  }
   
   deinit {
     NSNotificationCenter.defaultCenter().removeObserver(UIContentSizeCategoryDidChangeNotification)

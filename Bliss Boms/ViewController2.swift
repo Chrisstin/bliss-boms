@@ -17,6 +17,7 @@ class ViewController2: UIViewController, UIGestureRecognizerDelegate {
   required init(coder aDecoder: NSCoder) {
     controller = FateController()
     super.init(coder: aDecoder)!
+    
   }
   
   override func viewDidLoad() {

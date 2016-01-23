@@ -14,6 +14,7 @@ class ViewController1: UIViewController, UIGestureRecognizerDelegate {
   var deck = [CardView]()
   
   required init(coder aDecoder: NSCoder) {
+    
     // set up 3 deal controllers and pass into game controller
     let dc1 = SpiralController()
     let dc2 = FishController()

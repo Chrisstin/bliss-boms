@@ -19,9 +19,19 @@ class GameController {
     didSet {
       // connect the shuffle button
       hud.shuffleButton.addTarget(self, action: Selector("handleShuffleButtonTapped"), forControlEvents: .TouchUpInside)
-      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonNormal], forState: .Normal)
-      hud.shuffleButton.tintColor = colors[.ShuffleButtonImageTint]
-      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonDisabled], forState: .Disabled)
+//      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonNormal], forState: .Normal)
+//      hud.shuffleButton.tintColor = colors[.ShuffleButtonImageTint]
+//      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonDisabled], forState: .Disabled)
+      
+//      hud.toolbar.barTintColor = colors[.Display]
+//      hud.toolbar.tintColor = colors[.ShuffleButtonImageTint]
+//      hud.toolbar.translucent = false
+//      hud.toolbar.alpha = 0.0
+      
+//      hud.shareButton.addTarget(self, action: Selector("handleShareButtonTapped"), forControlEvents: .TouchUpInside)
+//      hud.shareButton.setTitleColor(colors[.ShuffleButtonNormal], forState: .Normal)
+//      hud.shareButton.tintColor = colors[.ShuffleButtonImageTint]
+//      hud.shareButton.setTitleColor(colors[.ShuffleButtonDisabled], forState: .Disabled)
     }
   }
   
@@ -43,6 +53,7 @@ class GameController {
   */
   init() {
     
+    //self.viewController = viewController
     createDeck()
     setColors()
     
@@ -59,6 +70,7 @@ class GameController {
     }
 
   }
+
   
   
   /*
@@ -81,7 +93,8 @@ class GameController {
   ******************************************
   */
   func setColors() {
-    colors = Theme1
+    colors = Theme1  // local copy so each controller can have different colors if required
+    Colors = Theme1  // global one
   }
   
   
@@ -222,6 +235,7 @@ class GameController {
         self.hud.shuffleButton.enabled = true
         
         self.configureShuffleButtonImage()
+        self.hud.hideToolbar()
     })
   }
   
@@ -245,7 +259,7 @@ class GameController {
   
   /*
   *****************************************
-  * Display and Flip Card
+  * Move Card up to Display
   ******************************************
   */
   func moveCardUpToDisplay(card: CardView) {
@@ -254,6 +268,7 @@ class GameController {
       return
     }
     hud.configureShuffleButtonNoImage()
+    hud.showToolbar()
     
     //print("card \(currentCard!.cardNum) was tapped, frame: \(NSStringFromCGRect(currentCard!.frame))")
     
@@ -327,6 +342,8 @@ class GameController {
         self.currentCard?.readingView?.flashScrollIndicators()
     })
   }
+  
+  
   
 
   

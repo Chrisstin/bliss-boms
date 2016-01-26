@@ -19,19 +19,6 @@ class GameController {
     didSet {
       // connect the shuffle button
       hud.shuffleButton.addTarget(self, action: Selector("handleShuffleButtonTapped"), forControlEvents: .TouchUpInside)
-//      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonNormal], forState: .Normal)
-//      hud.shuffleButton.tintColor = colors[.ShuffleButtonImageTint]
-//      hud.shuffleButton.setTitleColor(colors[.ShuffleButtonDisabled], forState: .Disabled)
-      
-//      hud.toolbar.barTintColor = colors[.Display]
-//      hud.toolbar.tintColor = colors[.ShuffleButtonImageTint]
-//      hud.toolbar.translucent = false
-//      hud.toolbar.alpha = 0.0
-      
-//      hud.shareButton.addTarget(self, action: Selector("handleShareButtonTapped"), forControlEvents: .TouchUpInside)
-//      hud.shareButton.setTitleColor(colors[.ShuffleButtonNormal], forState: .Normal)
-//      hud.shareButton.tintColor = colors[.ShuffleButtonImageTint]
-//      hud.shareButton.setTitleColor(colors[.ShuffleButtonDisabled], forState: .Disabled)
     }
   }
   
@@ -235,7 +222,6 @@ class GameController {
         self.hud.shuffleButton.enabled = true
         
         self.configureShuffleButtonImage()
-        self.hud.hideToolbar()
     })
   }
   
@@ -268,7 +254,6 @@ class GameController {
       return
     }
     hud.configureShuffleButtonNoImage()
-    hud.showToolbar()
     
     //print("card \(currentCard!.cardNum) was tapped, frame: \(NSStringFromCGRect(currentCard!.frame))")
     
@@ -343,8 +328,7 @@ class GameController {
     })
   }
   
-  
-  
+
 
   
 }

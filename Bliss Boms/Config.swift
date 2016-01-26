@@ -10,6 +10,13 @@ import UIKit
 
 var NumCards = 16
 
+enum UIUserInterfaceIdiom {
+  case Unspecified
+  case Phone
+  case Pad
+}
+let CurrentDevice = UIDevice.currentDevice().userInterfaceIdiom
+
 // UI Constants
 var ScreenWidth = UIScreen.mainScreen().bounds.size.width
 var ScreenHeight = UIScreen.mainScreen().bounds.size.height

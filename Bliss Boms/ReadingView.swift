@@ -41,7 +41,13 @@ class ReadingView: UITextView {
     
     createText()
 
-    self.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    //if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+    if CurrentDevice == .Phone {
+      self.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    } else {
+      self.textContainerInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+    }
+    
     self.layer.masksToBounds = true
     self.translatesAutoresizingMaskIntoConstraints = false
     self.userInteractionEnabled = true
@@ -233,6 +239,15 @@ class ReadingView: UITextView {
     }
     
     let activity = UIActivityViewController(activityItems: [text, link, image!], applicationActivities: nil)
+    activity.excludedActivityTypes = [
+      UIActivityTypeMessage,
+      UIActivityTypeMail,
+      UIActivityTypePrint,
+      UIActivityTypeAirDrop,
+      UIActivityTypeAddToReadingList,
+      UIActivityTypeAssignToContact,      // can't yet exclude Notes, will add in when available
+    ]
+    activity.popoverPresentationController?.barButtonItem = shareItem  // for iPad
     let rootVC = UIApplication.sharedApplication().keyWindow?.rootViewController
     rootVC!.presentViewController(activity, animated: true, completion: nil)
   }

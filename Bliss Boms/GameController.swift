@@ -44,16 +44,9 @@ class GameController {
     createDeck()
     setColors()
     
-    // set correct height ratio depending on screen size
-    // ratio is for the cards and is in relation to the card width
-    // 1.33 is ideal but too big for short screens
-    
+    // set to smaller card width for 4S and iPads
     if ScreenHeight / ScreenWidth < 1.7 {
-      CardHeightRectangle = CardHeightRectangleSmallerRatio
-      CardHeightLarge     = CardHeightLargeSmallerRatio
-    } else {
-      CardHeightRectangle = CardHeightRectangleBiggerRatio
-      CardHeightLarge = CardHeightLargeBiggerRatio
+      CardWidthDisplay = CardWidthDisplaySmallerRatio
     }
 
   }

@@ -406,7 +406,7 @@ class CardView: UIImageView {
       relatedBy: .Equal,
       toItem: self.superview!,
       attribute: .Width,
-      multiplier: CardWidthLarge,
+      multiplier: CardWidthDisplay,
       constant: 0.0)
     newConstraintWidth.identifier = "w"
     newConstraintWidth.active = true
@@ -419,7 +419,7 @@ class CardView: UIImageView {
       relatedBy: .Equal,
       toItem: self,
       attribute: .Width,
-      multiplier: CardHeightLarge,
+      multiplier: CardHeightDisplay,
       constant: 0.0)
     newConstraintHeight.identifier = "h"
     newConstraintHeight.active = true

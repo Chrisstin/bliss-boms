@@ -41,11 +41,10 @@ class ReadingView: UITextView {
     
     createText()
 
-    //if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
     if CurrentDevice == .Phone {
       self.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     } else {
-      self.textContainerInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+      self.textContainerInset = UIEdgeInsets(top: 15, left: 50, bottom: 50, right: 50)
     }
     
     self.layer.masksToBounds = true
@@ -97,8 +96,10 @@ class ReadingView: UITextView {
     artistText = "Artwork by " + reading.artist
     
     // create the fonts - based on user's settings
-    // except for Heading - override the size to 25% larger than body
     let fontB = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+    if CurrentDevice == .Pad {
+      
+    }
     let fontHStandard = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
     let fontHSize = fontB.pointSize + (fontB.pointSize * 0.33)
     let fontH = fontHStandard.fontWithSize(fontHSize)

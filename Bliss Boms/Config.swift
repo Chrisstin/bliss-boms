@@ -18,23 +18,20 @@ enum UIUserInterfaceIdiom {
 let CurrentDevice = UIDevice.currentDevice().userInterfaceIdiom
 
 // UI Constants
-var ScreenWidth = UIScreen.mainScreen().bounds.size.width
-var ScreenHeight = UIScreen.mainScreen().bounds.size.height
+let ScreenWidth = UIScreen.mainScreen().bounds.size.width
+let ScreenHeight = UIScreen.mainScreen().bounds.size.height
 
 // set the card width and height multipliers.  width is in relation to the screen width.  height is in relation to the card's width.
-// height ratio will be different depending on device size.  set in game controller
+// width ratio will be different depending on device size.  set in game controller
 let CardWidthCircle: CGFloat = 0.4
 let CardHeightCircle: CGFloat = 1
 
 let CardWidthRectangle: CGFloat = 0.5
-var CardHeightRectangle: CGFloat = 1.33
-let CardHeightRectangleSmallerRatio: CGFloat = 1.15
-let CardHeightRectangleBiggerRatio: CGFloat = 1.33
+let CardHeightRectangle: CGFloat = 1.33
 
-let CardWidthLarge: CGFloat = 0.95
-var CardHeightLarge: CGFloat = 1.33
-let CardHeightLargeSmallerRatio: CGFloat = 1.15
-let CardHeightLargeBiggerRatio: CGFloat = 1.33
+var CardWidthDisplay: CGFloat = 0.95
+let CardWidthDisplaySmallerRatio: CGFloat = 0.8
+let CardHeightDisplay: CGFloat = 1.33
 
 // Animation speeds
 let CardRiseSpeed: NSTimeInterval = 1.5

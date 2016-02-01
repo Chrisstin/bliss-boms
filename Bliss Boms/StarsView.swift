@@ -45,8 +45,9 @@ class StarsView: UIView {
     emitterCell.contents = texture!.CGImage
     emitterCell.name = "cell"
     
-    emitterCell.birthRate = 1000 // per second
+    emitterCell.birthRate = 500 // 1000 // per second
     emitterCell.lifetime = 1.00  // seconds
+    
     
     // if want pink
     emitterCell.greenRange = 0.2  // randomly vary the green component
@@ -63,8 +64,9 @@ class StarsView: UIView {
     //    emitterCell.yAcceleration = 100
     //    emitterCell.xAcceleration = -200
     
-    emitterCell.velocity = 370
-    emitterCell.velocityRange = 100  // i.e. the base value +/- this value
+    //
+    emitterCell.velocity =  ScreenWidth / 2 // 6 200  // 4S 50 // 370
+    emitterCell.velocityRange = 500 // 200  // i.e. the base value +/- this value
     
     emitterCell.scaleRange = 0.5
     emitterCell.scaleSpeed = -0.2  // shrink over time

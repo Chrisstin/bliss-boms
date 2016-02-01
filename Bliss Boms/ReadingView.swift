@@ -95,15 +95,8 @@ class ReadingView: UITextView {
     
     artistText = "Artwork by " + reading.artist
     
-    // create the fonts - based on user's settings
-    let fontB = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
-    if CurrentDevice == .Pad {
-      
-    }
-    let fontHStandard = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-    let fontHSize = fontB.pointSize + (fontB.pointSize * 0.33)
-    let fontH = fontHStandard.fontWithSize(fontHSize)
-    let fontC = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
+    // fonts
+    let (fontB, fontH, fontC) = getFonts()
     
     // other attributes
     let textColor = Colors[.Text]!
@@ -155,7 +148,27 @@ class ReadingView: UITextView {
     self.textStorage.appendAttributedString(attributedString)
     
   }
- 
+  
+  /*
+  *****************************************
+  * Get Fonts
+  ******************************************
+  */
+  func getFonts() -> (UIFont, UIFont, UIFont) {
+    // create the fonts - based on user's settings
+    let fontBStandard = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+    var fontBSize = fontBStandard.pointSize
+    if CurrentDevice == .Pad {
+      fontBSize *= 1.25
+    }
+    let fontB = fontBStandard.fontWithSize(fontBSize)
+    
+    let fontHStandard = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+    let fontHSize = fontB.pointSize + (fontB.pointSize * 0.33)
+    let fontH = fontHStandard.fontWithSize(fontHSize)
+    let fontC = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
+    return (fontB, fontH, fontC)
+  }
   
   /*
   *****************************************
@@ -200,6 +213,7 @@ class ReadingView: UITextView {
       constant: -15.0)
     conBot.active = true
   }
+  
   /*
   *****************************************
   * Load Toolbar

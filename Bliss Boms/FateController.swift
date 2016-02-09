@@ -63,33 +63,50 @@ class FateController: GameController {
       
     deck.shuffle()
     for card in deck {
+      
+      
       card.alpha = 1
       gameView.addSubview(card)
-      card.moveToCentre(0, yConst: -20.0)
-
-      let path = UIBezierPath()
-      // add random y offset so that each individual animation will appear at a different y
+      card.moveToCentre(0, yConst: -20)
+      
+      // randomly create a value between 20 and 1/2 of screen height
       let randomYOffset = CGFloat( arc4random_uniform(250))
       
-      path.moveToPoint(CGPoint(x: 16, y: 189 + randomYOffset))
-      path.addCurveToPoint(CGPoint(x: 301, y: 139 + randomYOffset),
-        controlPoint1: CGPoint(x: 136, y: 323 + randomYOffset),
-        controlPoint2: CGPoint(x: 178, y: 60 + randomYOffset))
+      // create a bezier path that defines the curve - convert to CGPath later
+      let path = UIBezierPath()
       
+      let startX = ScreenWidth / 20
+      let cp1X = ScreenWidth * 0.42
+      let cp2X = ScreenWidth * 0.55
+      let endX = ScreenWidth * 0.94
+      
+      let startY = (ScreenHeight * 0.4) + randomYOffset
+      let cp1Y = (ScreenHeight * 0.67) + randomYOffset
+      let cp2Y = (ScreenHeight * 0.12) + randomYOffset
+      let endY = (ScreenHeight * 0.29) + randomYOffset
+      
+      //print("card: \(card.cardNum), ys: \(startY), \(cp1Y), \(cp2Y), \(endY)")
+      
+      path.moveToPoint(CGPoint(x: startX, y: startY))  // previously 16 and 189
+      path.addCurveToPoint(CGPoint(x: endX, y: endY),  // previously 301 and 139
+        controlPoint1: CGPoint(x: cp1X, y: cp1Y),      // previously 136 and 323
+        controlPoint2: CGPoint(x: cp2X, y: cp2Y))      // previously 178 and 60
+      
+      // create animation to animate the object's position
       let anim = CAKeyframeAnimation(keyPath: "position")
       anim.path = path.CGPath
       
-      // rotate each card so that it's parallel to whatever point it is currently on the curve
+      // rotate so that it's parallel to whatever point it is currently on the curve
       anim.rotationMode = kCAAnimationRotateAuto
-      anim.repeatCount = 1
-      // each square will take between half a second and a second to complete one loop
+      anim.repeatCount = Float.infinity
+      // each square will take between 4 and 8 seconds to complete one loop
       anim.duration = Double(arc4random_uniform(40)+30) / 100
       // stagger each animation by a random value
       anim.timeOffset = Double(arc4random_uniform(290))
       
       // add the animation to the card's layer property
       card.layer.addAnimation(anim, forKey: "animate position along path")
-        
+      
       }
       
       delay(seconds: 1.2, completion: {

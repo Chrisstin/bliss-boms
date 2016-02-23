@@ -40,25 +40,44 @@ let CardDismissSpeed: NSTimeInterval = 1.0
 let ShuffleSpeed: NSTimeInterval = 0.0
 
 // URLs
-let FirstBitURL = "http://allysonroesler.wix.com/blissboms#!"
+let FirstBitURL = "http://blissboms.com/"
 let URLs = [
-  1  : "reach-out-to-others/cfvg",
-  2  : "allow-the-universe-to-bring-you-good/jrok9",
-  3  : "clear-away-negative-vibrations/srqnk",
-  4  : "let-go-of-the-struggle/qbi9a",
-  5  : "you-are-not-wrong/a94rq",
-  6  : "blank/xdko0",
-  7  : "blank/zxjcc",
-  8  : "freedom/fdv98",
-  9  : "depression/mshcy",
-  10 : "blank/luai2",
-  11 : "refocus-your-attention/ta0f1",
-  12 : "fitting-in/xf5nt",
-  13 : "blank/hr9z5",
-  14 : "blank/vymr2",
-  15 : "potency/tm8ak",
-  16 : "blank/bkw23",
+  1  : "reach-out-to-others",
+  2  : "allow-the-universe-to-bring-you-good",
+  3  : "clear-away-negative-vibrations",
+  4  : "let-go-of-the-struggle",
+  5  : "you-are-not-wrong",
+  6  : "appreciation-and-gratitude",
+  7  : "loneliness-and-isolation",
+  8  : "freedom",
+  9  : "depression",
+  10 : "what-is-the-point",
+  11 : "refocus-your-attention",
+  12 : "fitting-in",
+  13 : "what-are-you-griping-about",
+  14 : "are-you-procrastinating",
+  15 : "potency",
+  16 : "have-you-considered-all-the-options",
 ]
+//let FirstBitURL = "http://allysonroesler.wix.com/blissboms#!"
+//let URLs = [
+//  1  : "reach-out-to-others/cfvg",
+//  2  : "allow-the-universe-to-bring-you-good/jrok9",
+//  3  : "clear-away-negative-vibrations/srqnk",
+//  4  : "let-go-of-the-struggle/qbi9a",
+//  5  : "you-are-not-wrong/a94rq",
+//  6  : "blank/xdko0",
+//  7  : "blank/zxjcc",
+//  8  : "freedom/fdv98",
+//  9  : "depression/mshcy",
+//  10 : "blank/luai2",
+//  11 : "refocus-your-attention/ta0f1",
+//  12 : "fitting-in/xf5nt",
+//  13 : "blank/hr9z5",
+//  14 : "blank/vymr2",
+//  15 : "potency/tm8ak",
+//  16 : "blank/bkw23",
+//]
 
 // Theme colours
 enum ColType {

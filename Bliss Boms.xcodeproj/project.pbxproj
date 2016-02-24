@@ -39,6 +39,8 @@
 		83696F921BB28A210007BA5C /* FateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F911BB28A210007BA5C /* FateController.swift */; };
 		83696F941BB28B590007BA5C /* SpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F931BB28B590007BA5C /* SpiralController.swift */; };
 		83696F981BB28BFE0007BA5C /* FishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83696F971BB28BFE0007BA5C /* FishController.swift */; };
+		83BC2F951C7D5BEE0022465B /* tap-hollow.aif in Resources */ = {isa = PBXBuildFile; fileRef = 83BC2F941C7D5BEE0022465B /* tap-hollow.aif */; };
+		83BC2F971C7D5E630022465B /* tap-mellow.aif in Resources */ = {isa = PBXBuildFile; fileRef = 83BC2F961C7D5E630022465B /* tap-mellow.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		83696F911BB28A210007BA5C /* FateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FateController.swift; sourceTree = "<group>"; };
 		83696F931BB28B590007BA5C /* SpiralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralController.swift; sourceTree = "<group>"; };
 		83696F971BB28BFE0007BA5C /* FishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishController.swift; sourceTree = "<group>"; };
+		83BC2F941C7D5BEE0022465B /* tap-hollow.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tap-hollow.aif"; sourceTree = "<group>"; };
+		83BC2F961C7D5E630022465B /* tap-mellow.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tap-mellow.aif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		8308517F1BB164F30015A6CA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				83BC2F931C7D5BA00022465B /* Sounds */,
 				830851821BB165130015A6CA /* Texts */,
 				830851801BB164FF0015A6CA /* Particles */,
 			);
@@ -252,6 +257,15 @@
 				83696F891BB2886C0007BA5C /* ArrayExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		83BC2F931C7D5BA00022465B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				83BC2F961C7D5E630022465B /* tap-mellow.aif */,
+				83BC2F941C7D5BEE0022465B /* tap-hollow.aif */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +354,9 @@
 				8308515F1BB15B2E0015A6CA /* Main.storyboard in Resources */,
 				830851641BB15B2E0015A6CA /* LaunchScreen.xib in Resources */,
 				835E9D441BDB6970007C9480 /* blissboms.json in Resources */,
+				83BC2F971C7D5E630022465B /* tap-mellow.aif in Resources */,
 				830851611BB15B2E0015A6CA /* Images.xcassets in Resources */,
+				83BC2F951C7D5BEE0022465B /* tap-hollow.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

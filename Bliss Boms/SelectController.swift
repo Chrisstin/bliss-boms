@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SelectController: GameController {
 
@@ -19,6 +20,8 @@ class SelectController: GameController {
   let dealController3: DealController
   var numLabelAnimations = 0
   
+  let tapPlayer: AVAudioPlayer
+  
   
   // MARK: - Initial set up
   
@@ -28,6 +31,11 @@ class SelectController: GameController {
     self.dealController3 = dealController3
     
     self.dealController = dealController1
+    
+    // set up tap sound
+    let tapPath = NSBundle.mainBundle().pathForResource("tap-mellow", ofType: "aif")
+    let tapURL = NSURL(fileURLWithPath: tapPath!)
+    tapPlayer = try! AVAudioPlayer(contentsOfURL: tapURL)
     
     super.init()
   
@@ -285,6 +293,7 @@ class SelectController: GameController {
     
     
     if CardTapped {
+      tapPlayer.play()
       if let currCard = currentCard {
         numCardsTapped++
         hud.dealType!.alpha = 0.0

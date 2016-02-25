@@ -247,7 +247,7 @@ class ReadingView: UITextView {
   */
   func share() {
     let image = UIImage(named: "card \(cardNum)")
-    let text = heading + " #OracleCards @Bliss_Boms. Read more at"
+    let text = heading + "  #BlissBom #OracleCards. Read more at"
     var link = FirstBitURL
     if let cardUrl = URLs[cardNum] {
       link += cardUrl

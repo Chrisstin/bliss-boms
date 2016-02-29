@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Home-->
+        <!--About-->
         <scene sceneID="T8L-Ye-wtc">
             <objects>
                 <viewController id="QNZ-wi-ew0" customClass="ViewController4" customModule="Bliss_Boms" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <constraint firstItem="qao-mY-UsI" firstAttribute="leading" secondItem="3LO-Xg-ad0" secondAttribute="leading" constant="10" id="t4T-YY-b2T"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="Ezs-6W-h19"/>
+                    <tabBarItem key="tabBarItem" title="About" image="ic_info" id="Ezs-6W-h19"/>
                     <connections>
                         <outlet property="homeView" destination="qao-mY-UsI" id="uhQ-6e-wc1"/>
                     </connections>
@@ -143,7 +143,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="ic_flare" width="24" height="24"/>
-        <image name="ic_home" width="24" height="24"/>
+        <image name="ic_info" width="24" height="24"/>
         <image name="ic_vibration" width="24" height="24"/>
     </resources>
 </document>
